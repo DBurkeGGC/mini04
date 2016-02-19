@@ -27,7 +27,7 @@ post '/excel' do
     myHash = { params['number'].to_i => Excel.new.to_excel(params['number']) }
     return JSON.generate(myHash)
   else
-    return "You are not logged in!"
+    erb :login
   end
 end
 
@@ -36,6 +36,6 @@ get '/excel' do
     myHash = { params['number'].to_i => Excel.new.to_excel(params['number']) }
     return JSON.generate(myHash)
   else
-    return "You are not logged in!"
+    erb :login
   end
 end
