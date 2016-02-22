@@ -10,7 +10,7 @@ class Excel
       end
       return result
     else
-      return "INPUT MUST BE > 1"
+      return "INPUT MUST BE > 0"
     end
   end
   
